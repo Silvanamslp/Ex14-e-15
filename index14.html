@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Interrogacao</title>
+    <style>
+        body{
+            background:rgb(240,0,0,0.2);
+        }
+        p{
+            font-size:20px;
+            color:darkred;
+        }  
+    </style>
+</head>
+<body>
+    <p >Como assim?</p>
+    <p >Será que vou saber fazer? E se conseguir, será que estará certo?</p>
+    <script>
+        let antes = document.body.innerHTML;
+        document.body.innerHTML=antes.replace(/?/g,"&#129300;");
+    </script>
+<!-- Imagine uma página HTML com vários parágrafos (tag <p>). Sua tarefa é substituir
+todos os caracteres de interrogação (?) por um emoji de dúvida 🙋 usando JavaScript.
+Pode escolher outro emoji se preferir. Para fazer o exercício crie por conta própria os
+parágrafos com o caracter em questão. Sua solução deve funcionar para qualquer
+página HTML com variadas quantidades de parágrafos.-->
+</body>
+</html>

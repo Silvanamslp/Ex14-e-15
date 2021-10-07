@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>conversao</title>
+    <style>
+      
+        #conversor{
+            width: 400px;
+            Border-color:green solid;
+            border-size:4px;
+            border-radius: 30px 5px;
+        }
+        #entrada{
+            width:300px;
+            border:none;
+            background:rgb(20,60,30,0.8);
+            color:white;
+        }
+        button{
+            Border-color:green solid;
+            border:none;
+            border-radius: 30px 20px;
+            background:rgb(20,60,30,0.8);
+            color:white;
+            font-size:15px;
+            height:60px;
+        }
+        .lsaid{
+            margin-left:30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <fieldset id="conversor">
+        <legend>CONVERSOR</legend>
+        <label for="entrada">Digite o valor</label>
+        <input type="numeric" name="entrada" id="entrada"/><br><br>
+
+        <input type="radio" id="dolReal" name="moeda"class="moeda" value="1" checked/>
+        <label for="dolReal">Converter Dolar/Real</label>
+        <input type="radio" id="RealDol" name="moeda" class="moeda" value="2"/>
+        <label for="Real/Dol">Converter Real/Dolar</label><br><br>
+
+        <button onclick="converte()">Calcular</button>
+
+        <label for="saida" class="lsaid">Valor Convertido</label>
+        <input type="numeric" id="saida" />
+    </fieldset>
+
+    <script>
+        function converte(){
+            var dolar=6.0;
+            var resultado=document.getElementById("saida");
+            if(document.getElementById("Dolar/Real").checked){
+                resultado.value=document.getElementById("entrada").value/6;
+            }
+            else {
+                resultado.value=document.getElementById("entrada").value*6;
+            }
+            
+        }
+    </script>
+<!-- 
+Criar um componente que tenha uma caixa de texto que só aceita números e tenha
+um rótulo (label). Você usará esse número para fazer uma conversão de moedas. Em
+seguida crie uma entrada do tipo radio button para que o usuário selecione se deseja
+converter de "Real para Dólar" ou "Dolar para Real". Por fim, você deve ainda possuir
+um botão “calcular”. Após o usuário passar os dados de entrada e clicar no botão
+calcular, você deve apresentar em alguma parte da tela o resultado da conversão.
+Obs: Assuma que a cotação dólar real seja $1 -> R$6,00.
+-->
+</body>
+</html>
+</body>
+</html>
